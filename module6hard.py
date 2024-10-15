@@ -46,21 +46,20 @@ class Figure: #фигура
            if i > 0:
                if len(new_sides)==self.sides_count:
                    return True
-               else:
-                   return False
+           else:
+               return False
 
     def set_sides(self,*new_sides):# принимает новые  стороны  и если их кол-во не равно==0
         # то не изменять, иначе менять
-        for v in new_sides:
-            if v != self.__is_valid_sides(v):
+        for j in new_sides:
+            if j != self.__is_valid_sides(j):
                 self._sides = list(new_sides)
             return self._sides
-
 class Circle (Figure):
     sides_count = 1
 
     def __init__(self,color,circumferense):
-        super.__init__(color,circumferense)
+        super().__init__(color,circumferense)
         self._radius = circumferense/(2 * pi)
 
     def get_square(self):
